@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/home/harry/venvs/thms/bin/python",
+    "cSpell.words": [
+        "codomain",
+        "irreflexive"
+    ],
+    "cSpell.enableFiletypes": [
+        "!python"
+    ]
+}

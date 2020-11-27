@@ -1,0 +1,866 @@
+[
+    {
+        "type": "definition",
+        "name": "Odd and Even",
+        "tags": "",
+        "category": "Numbers",
+        "content": "<p>An integer <span class=\"math inline\">\\(n\\)</span> is <em>even</em> if there is some integer <span class=\"math inline\">\\(k\\)</span> such that <span class=\"math inline\">\\(n = 2k\\)</span>. An integer <span class=\"math inline\">\\(n\\)</span> is <em>odd</em> if there is some integer <span class=\"math inline\">\\(k\\)</span> such that <span class=\"math inline\">\\(n = 2k+1\\)</span>.</p>\n",
+        "idx": 0
+    },
+    {
+        "type": "theorem",
+        "name": "Square of even number is even",
+        "tags": "",
+        "category": "Numbers",
+        "content": "<p>If <span class=\"math inline\">\\(n\\)</span> is an even integer, then <span class=\"math inline\">\\(n^2\\)</span> is also even.</p>\n",
+        "idx": 1
+    },
+    {
+        "type": "theorem",
+        "name": "Square root of 2 is irrational",
+        "tags": "",
+        "category": "Numbers",
+        "content": "<p><span class=\"math inline\">\\(\\sqrt{2}\\)</span> is irrational.</p>\n",
+        "idx": 2
+    },
+    {
+        "type": "definition",
+        "name": "Empty Set",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p>The empty set, denoted <span class=\"math inline\">\\(\\emptyset\\)</span> or <span class=\"math inline\">\\(\\{\\}\\)</span> is the set containing no elements.</p>\n",
+        "idx": 3
+    },
+    {
+        "type": "definition",
+        "name": "Subset",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p>A set <span class=\"math inline\">\\(A\\)</span> is a <em>subset</em> of another set <span class=\"math inline\">\\(B\\)</span> if for all objects <span class=\"math inline\">\\(x\\)</span>, if <span class=\"math inline\">\\(x \\in A\\)</span>, then <span class=\"math inline\">\\(x \\in B\\)</span>, that is all elements of <span class=\"math inline\">\\(A\\)</span> are also elements of <span class=\"math inline\">\\(B\\)</span>.</p>\n",
+        "idx": 4
+    },
+    {
+        "type": "definition",
+        "name": "Set equality",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p>A set <span class=\"math inline\">\\(A\\)</span> is <em>equal</em> to another set <span class=\"math inline\">\\(B\\)</span> if <span class=\"math inline\">\\(A \\subseteq B\\)</span> and <span class=\"math inline\">\\(B \\subseteq A\\)</span>.</p>\n",
+        "idx": 5
+    },
+    {
+        "type": "theorem",
+        "name": "Transitivity of Subset",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p>If <span class=\"math inline\">\\(A \\subseteq B\\)</span>, and <span class=\"math inline\">\\(B \\subseteq C\\)</span>, then <span class=\"math inline\">\\(A \\subseteq C\\)</span></p>\n",
+        "idx": 6
+    },
+    {
+        "type": "definition",
+        "name": "Union",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p><span class=\"math inline\">\\(A \\cup B = \\{x : x \\in A \\text{ or } x \\in B \\text{ or both }\\}\\)</span></p>\n",
+        "idx": 7
+    },
+    {
+        "type": "definition",
+        "name": "Intersection",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p><span class=\"math inline\">\\(A \\cap B = \\{x : x \\in A \\text{ and } x \\in B\\}\\)</span></p>\n",
+        "idx": 8
+    },
+    {
+        "type": "definition",
+        "name": "Difference",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p><span class=\"math inline\">\\(A - B = \\{x : x \\in A \\text{ and } x \\notin B\\}\\)</span></p>\n",
+        "idx": 9
+    },
+    {
+        "type": "definition",
+        "name": "Symmetric difference",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p><span class=\"math inline\">\\(A \\Delta B = \\{x : x \\in A \\text{ and } x \\notin B \\text{ or } x \\in B \\text{ and } x \\notin A\\}\\)</span></p>\n",
+        "idx": 10
+    },
+    {
+        "type": "theorem",
+        "name": "Cantor's theorem",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p>If <span class=\"math inline\">\\(S\\)</span> is a set, then <span class=\"math inline\">\\(|S| &lt; |\\wp(S)|\\)</span>. That is, the cardinality of any set is strictly smaller than the cardinality of its powerset.</p>\n",
+        "idx": 11
+    },
+    {
+        "type": "definition",
+        "name": "Disjoint",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p>Two sets <span class=\"math inline\">\\(A\\)</span>, <span class=\"math inline\">\\(B\\)</span> are <em>disjoint</em> if their intersection is the emptyset.</p>\n",
+        "idx": 12
+    },
+    {
+        "type": "definition",
+        "name": "Partition",
+        "tags": "",
+        "category": "Sets",
+        "content": "<p>A <em>partition</em> of a set is a way of splitting it into disjoint, non-empty subsets so that every element belongs to exactly one subset.</p>\n",
+        "idx": 13
+    },
+    {
+        "type": "definition",
+        "name": "Vacuous Truths",
+        "tags": "",
+        "category": "Logic",
+        "content": "<p>A statement of the form <span class=\"math inline\">\\(\\forall x \\in A. (P(x))\\)</span> is called vacuously true if <span class=\"math inline\">\\(A = \\emptyset\\)</span>. An implication <span class=\"math inline\">\\(p \\implies q\\)</span> is called vacuously true if <span class=\"math inline\">\\(p\\)</span> is false.</p>\n",
+        "idx": 14
+    },
+    {
+        "type": "definition",
+        "name": "Negation",
+        "tags": "",
+        "category": "Logic",
+        "content": "<p>If <span class=\"math inline\">\\(\\varphi\\)</span> is a proposition, its <em>negation</em> <span class=\"math inline\">\\(\\neg \\varphi\\)</span> is a proposition that is true whenever <span class=\"math inline\">\\(\\varphi\\)</span> is false, and false whenever <span class=\"math inline\">\\(\\varphi\\)</span> is true. TODO link guide to negations.</p>\n",
+        "idx": 15
+    },
+    {
+        "type": "definition",
+        "name": "Contrapositive",
+        "tags": "",
+        "category": "Logic",
+        "content": "<p>The <em>contrapositive</em> of an implication <span class=\"math inline\">\\(p \\implies q\\)</span> is the equivalent statement <span class=\"math inline\">\\(\\neg q \\implies \\neg p\\)</span>.</p>\n",
+        "idx": 16
+    },
+    {
+        "type": "definition",
+        "name": "Proof by contrapositive",
+        "tags": "",
+        "category": "Logic",
+        "content": "<p>One way to prove an implication <span class=\"math inline\">\\(p \\implies q\\)</span> is to prove the contrapositive statement: <span class=\"math inline\">\\(\\neg q \\implies \\neg p\\)</span>.</p>\n",
+        "idx": 17
+    },
+    {
+        "type": "definition",
+        "name": "Proof by contradiction",
+        "tags": "",
+        "category": "Logic",
+        "content": "<p>To prove a proposition <span class=\"math inline\">\\(P\\)</span>. Assume its negation, <span class=\"math inline\">\\(\\neg P\\)</span>, and find some sort of contradiction/inconsistency.</p>\n",
+        "idx": 18
+    },
+    {
+        "type": "definition",
+        "name": "Propositional logic",
+        "tags": "",
+        "category": "Logic",
+        "content": "<p>TODO link.</p>\n",
+        "idx": 19
+    },
+    {
+        "type": "theorem",
+        "name": "De Morgan's Laws",
+        "tags": "",
+        "category": "Logic",
+        "content": "<ol>\n<li><p><span class=\"math inline\">\\(\\neg(a \\land b) = \\neg a \\lor \\neg b\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(\\neg(a \\lor b) = \\neg a \\land \\neg b\\)</span></p></li>\n</ol>\n",
+        "idx": 20
+    },
+    {
+        "type": "definition",
+        "name": "Aristotelian Forms",
+        "tags": "",
+        "category": "Logic",
+        "content": "<ol>\n<li><p>\u201cAll A\u2019s are B\u2019s\": <span class=\"math inline\">\\(\\forall x. (A(x) \\implies B(x))\\)</span></p></li>\n<li><p>\u201cSome A\u2019s are B\u2019s\": <span class=\"math inline\">\\(\\exists x. (A(x) \\land B(x))\\)</span></p></li>\n<li><p>\u201cNo A\u2019s are B\u2019s\": <span class=\"math inline\">\\(\\exists x. (A(x) \\implies \\neg B(x))\\)</span></p></li>\n<li><p>\u201cSome A\u2019s aren\u2019t B\u2019s\": <span class=\"math inline\">\\(\\exists x. (A(x) \\land \\neg B(x))\\)</span></p></li>\n</ol>\n",
+        "idx": 21
+    },
+    {
+        "type": "definition",
+        "name": "Binary Relation",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A <em>binary relation</em> over a set <span class=\"math inline\">\\(A\\)</span> is a predicate <span class=\"math inline\">\\(R\\)</span> that can be applied to pairs of elements drawn from <span class=\"math inline\">\\(A\\)</span>. If <span class=\"math inline\">\\(R\\)</span> holds for two elements <span class=\"math inline\">\\(a, b \\in A\\)</span>, we write <span class=\"math inline\">\\(aRb\\)</span>. If <span class=\"math inline\">\\(R\\)</span> does not hold we write <span class=\"math inline\">\\(a \\cancel R  b\\)</span></p>\n",
+        "idx": 22
+    },
+    {
+        "type": "definition",
+        "name": "Reflexivity",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A binary relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is <em>reflexive</em> if everything relates to itself. <span class=\"math display\">\\[\\forall a \\in A.(aRa).\\]</span></p>\n",
+        "idx": 23
+    },
+    {
+        "type": "definition",
+        "name": "Irreflexivity",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A binary relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is <em>irreflexive</em> if nothing relates to itself. <span class=\"math display\">\\[\\forall a \\in A.(a\\cancel{R}a).\\]</span></p>\n",
+        "idx": 24
+    },
+    {
+        "type": "definition",
+        "name": "Symmetric",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A binary relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is <em>symmetric</em> if <span class=\"math display\">\\[\\forall a, b\\in A.(aRb \\implies bRa).\\]</span></p>\n",
+        "idx": 25
+    },
+    {
+        "type": "definition",
+        "name": "Asymmetric",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A binary relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is <em>asymmetric</em> if <span class=\"math display\">\\[\\forall a, b\\in A.(aRb \\implies b\\cancel{R}a).\\]</span></p>\n",
+        "idx": 26
+    },
+    {
+        "type": "definition",
+        "name": "Transitive",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A binary relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is <em>transitive</em> if <span class=\"math display\">\\[\\forall a, b,c\\in A.((aRb \\land b R c) \\implies aRc).\\]</span></p>\n",
+        "idx": 27
+    },
+    {
+        "type": "definition",
+        "name": "Cyclic",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A binary relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is <em>cyclic</em> if <span class=\"math display\">\\[\\forall a, b,c\\in A.((aRb \\land b R c) \\implies cRa).\\]</span></p>\n",
+        "idx": 28
+    },
+    {
+        "type": "definition",
+        "name": "Equivalence relation",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is called an <em>equivalence relation</em> if it is reflexive, symmetric and transitive.</p>\n",
+        "idx": 29
+    },
+    {
+        "type": "definition",
+        "name": "Equivalence class",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>If <span class=\"math inline\">\\(R\\)</span> is an equivalence relation over a set <span class=\"math inline\">\\(A\\)</span>, and <span class=\"math inline\">\\(a \\in A\\)</span>. The <em>equivalence class</em> of <span class=\"math inline\">\\(a\\)</span>, denoted by <span class=\"math inline\">\\([a]_R\\)</span> is the set of elements that relate to <span class=\"math inline\">\\(a\\)</span>, formally, <span class=\"math display\">\\[[a]_R = \\left\\{b \\in A : a R b\\right\\}.\\]</span></p>\n",
+        "idx": 30
+    },
+    {
+        "type": "theorem",
+        "name": "Fundamental theorem of equivalence classes",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>Let <span class=\"math inline\">\\(R\\)</span> be an equivalence relation over a set <span class=\"math inline\">\\(A\\)</span>. Then each element <span class=\"math inline\">\\(a \\in A\\)</span> is in exactly one equivalence class of <span class=\"math inline\">\\(R\\)</span>. In other words, the equivalence classes of <span class=\"math inline\">\\(R\\)</span> partition <span class=\"math inline\">\\(A\\)</span>.</p>\n",
+        "idx": 31
+    },
+    {
+        "type": "definition",
+        "name": "Strict order",
+        "tags": "",
+        "category": "Binary Relations",
+        "content": "<p>A relation <span class=\"math inline\">\\(R\\)</span> over a set <span class=\"math inline\">\\(A\\)</span> is a <em>strict order</em> if it is irreflexive, asymmetric, and transitive.</p>\n",
+        "idx": 32
+    },
+    {
+        "type": "definition",
+        "name": "Function",
+        "tags": "",
+        "category": "Function",
+        "content": "<p><span class=\"math inline\">\\(f: A \\to B\\)</span> is called a <em>function</em> from <span class=\"math inline\">\\(A\\)</span> (domain) to <span class=\"math inline\">\\(B\\)</span> (codomain) if it obeys the domain/codomain rule <span class=\"math display\">\\[\\forall x \\in A.(f(x) \\in B),\\]</span> and is deterministic <span class=\"math display\">\\[\\forall x, y \\in A.(x = y \\implies f(x) = f(y)).\\]</span></p>\n",
+        "idx": 33
+    },
+    {
+        "type": "definition",
+        "name": "Function composition",
+        "tags": "",
+        "category": "Function",
+        "content": "<p>If <span class=\"math inline\">\\(f:A \\to B\\)</span> and <span class=\"math inline\">\\(g:B \\to C\\)</span> are functions, the <em>composition</em>, <span class=\"math inline\">\\(g \\circ f : A \\to C\\)</span>, is a function such that for all <span class=\"math inline\">\\(x \\in A.(g \\circ f(x) = g(f(x)))\\)</span></p>\n",
+        "idx": 34
+    },
+    {
+        "type": "definition",
+        "name": "Injective",
+        "tags": "",
+        "category": "Function",
+        "content": "<p>A function <span class=\"math inline\">\\(f: A\\to B\\)</span> is <em>injective</em> if <span class=\"math display\">\\[\\forall x,y \\in A.(f(x) = f(y) \\implies x = y),\\]</span> or equivalently, <span class=\"math display\">\\[\\forall x,y \\in A.(x \\neq y \\implies f(x) \\neq f(y)).\\]</span></p>\n",
+        "idx": 35
+    },
+    {
+        "type": "definition",
+        "name": "Surjective",
+        "tags": "",
+        "category": "Function",
+        "content": "<p>A function <span class=\"math inline\">\\(f: A\\to B\\)</span> is <em>surjective</em> if <span class=\"math display\">\\[\\forall b \\in B.\\exists a \\in A. (f(a) = b).\\]</span></p>\n",
+        "idx": 36
+    },
+    {
+        "type": "definition",
+        "name": "Bijective",
+        "tags": "",
+        "category": "Function",
+        "content": "<p>A function <span class=\"math inline\">\\(f: A\\to B\\)</span> is <em>bijective</em> if it is both injective and surjective.</p>\n",
+        "idx": 37
+    },
+    {
+        "type": "definition",
+        "name": "Inverse",
+        "tags": "",
+        "category": "Function",
+        "content": "<p>The <em>inverse</em> of a function <span class=\"math inline\">\\(f:A \\to B\\)</span> is a function <span class=\"math inline\">\\(f^{-1} B \\to A\\)</span> that satisfies the following: <span class=\"math display\">\\[\\forall a \\in A.(f^{-1}(f(a)) = a),\\]</span> and <span class=\"math display\">\\[\\forall b \\in B.(f(f^{-1}(b)) = b).\\]</span></p>\n",
+        "idx": 38
+    },
+    {
+        "type": "definition",
+        "name": "Cardinality",
+        "tags": "",
+        "category": "Function",
+        "content": "<p>If <span class=\"math inline\">\\(X\\)</span> and <span class=\"math inline\">\\(Y\\)</span> are sets, <span class=\"math inline\">\\(|X| = |Y|\\)</span> if there exists a bijection <span class=\"math inline\">\\(f: X \\to Y\\)</span>, and <span class=\"math inline\">\\(|X| \\neq |Y|\\)</span> if every function from <span class=\"math inline\">\\(X\\)</span> to <span class=\"math inline\">\\(Y\\)</span> is not a bijection.</p>\n",
+        "idx": 39
+    },
+    {
+        "type": "definition",
+        "name": "Graph",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A <em>graph</em> <span class=\"math inline\">\\(G = (V, E)\\)</span> is an tuple of two sets <span class=\"math inline\">\\(V\\)</span>, and <span class=\"math inline\">\\(E\\)</span>. Where <span class=\"math inline\">\\(V\\)</span> is a set of vertices and <span class=\"math inline\">\\(E\\)</span> is a set of edges which are unordered pairs of vertices. A directed graph is the same but edges are ordered pairs instead of unordered. In this class we mainly care about undirected graphs. Self loops are not allowed in this class (no vertex can have an edge to itself).</p>\n",
+        "idx": 40
+    },
+    {
+        "type": "definition",
+        "name": "Adjacent",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>If we have a graph <span class=\"math inline\">\\(G = (V, E)\\)</span>, two vertices <span class=\"math inline\">\\(u, v\\)</span> are <em>adjacent</em> if <span class=\"math inline\">\\(\\{u, v\\} \\in E\\)</span>, that is, there is an edge between <span class=\"math inline\">\\(u\\)</span> and <span class=\"math inline\">\\(v\\)</span>.</p>\n",
+        "idx": 41
+    },
+    {
+        "type": "definition",
+        "name": "Degree",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>The <em>degree</em> of a vertex <span class=\"math inline\">\\(v\\)</span> is the number of nodes that <span class=\"math inline\">\\(v\\)</span> is adjacent to.</p>\n",
+        "idx": 42
+    },
+    {
+        "type": "definition",
+        "name": "Path",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A <em>path</em> is a sequence of one or more nodes <span class=\"math inline\">\\(v_1,...,v_n\\)</span> such that any two consecutive nodes are adjacent. The length of a path is the number of edges in the path.</p>\n",
+        "idx": 43
+    },
+    {
+        "type": "definition",
+        "name": "Cycle",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A <em>cycle</em> is a path that starts and ends at the same node.</p>\n",
+        "idx": 44
+    },
+    {
+        "type": "definition",
+        "name": "Simple path",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A <em>simple path</em> is a path that does not repeat any nodes or edges.</p>\n",
+        "idx": 45
+    },
+    {
+        "type": "definition",
+        "name": "Simple cycle",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A <em>simple cycle</em> is a cycle that does not repeat any vertices except the first/last one.</p>\n",
+        "idx": 46
+    },
+    {
+        "type": "definition",
+        "name": "Connected",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>Two nodes <span class=\"math inline\">\\(u, v\\)</span> in a graph are <em>connected</em> if there is a path from one to the other. A graph <span class=\"math inline\">\\(G\\)</span> is called <em>connected</em> if all pairs of nodes are connected.</p>\n",
+        "idx": 47
+    },
+    {
+        "type": "definition",
+        "name": "Connected component",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>The connected component of a vertex <span class=\"math inline\">\\(v\\)</span>, denoted <span class=\"math inline\">\\([v] = \\{x \\in V: v \\text{ is connected to } x\\}\\)</span>.</p>\n",
+        "idx": 48
+    },
+    {
+        "type": "theorem",
+        "name": "Connected is an equivalence relation",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>The connectivity relation on <span class=\"math inline\">\\(V\\)</span> is an equivalence relation, and the equivalence classes of this relation are connected components.</p>\n",
+        "idx": 49
+    },
+    {
+        "type": "definition",
+        "name": "Planar graph",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A graph is called <em>planar</em> if there is some way to draw it in 2D plane without any edges crossing.</p>\n",
+        "idx": 50
+    },
+    {
+        "type": "definition",
+        "name": "k-coloring",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A <span class=\"math inline\">\\(k\\)</span>-<em>coloring</em> of a graph is a way to color each of the vertices such that no adjacent vertices are the same color. Formally, a <span class=\"math inline\">\\(k\\)</span>-coloring is a function <span class=\"math inline\">\\(f: V \\to \\{1, 2, ...,k\\}\\)</span> such that <span class=\"math inline\">\\(\\forall u, v.(\\{u, v\\}\\in E \\implies f(u) \\neq f(v))\\)</span>.</p>\n",
+        "idx": 51
+    },
+    {
+        "type": "definition",
+        "name": "k-colorable",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A graph is called <span class=\"math inline\">\\(k\\)</span>-<em>colorable</em> if a <span class=\"math inline\">\\(k\\)</span>-coloring exists.</p>\n",
+        "idx": 52
+    },
+    {
+        "type": "definition",
+        "name": "Chromatic number",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>The smallest <span class=\"math inline\">\\(k\\)</span> for a graph <span class=\"math inline\">\\(G\\)</span> is <span class=\"math inline\">\\(k\\)</span>-colorable is its <em>chromatic number</em>.</p>\n",
+        "idx": 53
+    },
+    {
+        "type": "theorem",
+        "name": "Pigeonhole principle",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>If there are <span class=\"math inline\">\\(m\\)</span> objects distributed into <span class=\"math inline\">\\(n\\)</span> bins with <span class=\"math inline\">\\(m &gt; n\\)</span>, then at least one bin will contain at least two objects.</p>\n",
+        "idx": 54
+    },
+    {
+        "type": "definition",
+        "name": "",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>A <em>tree</em> is a connected graph with no simple cycles. They are maximally acyclic in that adding any edge creates a cycle, and minimally connected in that remove any edge makes the graph disconnected.</p>\n",
+        "idx": 55
+    },
+    {
+        "type": "theorem",
+        "name": "Two nodes of same degree",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>In any graph with at least 2 nodes, there are at least nodes of the same degree.</p>\n",
+        "idx": 56
+    },
+    {
+        "type": "theorem",
+        "name": "Generalized pigeonhole principle",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>If you distribute <span class=\"math inline\">\\(m\\)</span> objects into <span class=\"math inline\">\\(n\\)</span> bins, then</p>\n<ul>\n<li><p>Some bin will have at least <span class=\"math inline\">\\(\\lceil m/n \\rceil\\)</span></p></li>\n<li><p>Some bin will have at most <span class=\"math inline\">\\(\\lfloor m/n \\rfloor\\)</span></p></li>\n</ul>\n",
+        "idx": 57
+    },
+    {
+        "type": "theorem",
+        "name": "Friends and strangers",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>In any group of <span class=\"math inline\">\\(6\\)</span> people where every pair of people are either friends or strangers, there must be a group of <span class=\"math inline\">\\(3\\)</span> mutual friends or a group of <span class=\"math inline\">\\(3\\)</span> mutual strangers.</p>\n",
+        "idx": 58
+    },
+    {
+        "type": "theorem",
+        "name": "Ramsey's theorem",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>For any natural number <span class=\"math inline\">\\(n\\)</span>, there is a natural number <span class=\"math inline\">\\(R(n)\\)</span> such that if the edges of an <span class=\"math inline\">\\(R(n)\\)</span>-clique are colored red or blue, the resulting graph will contain either a red-<span class=\"math inline\">\\(n\\)</span>-clique or a blue-<span class=\"math inline\">\\(n\\)</span>-clique.</p>\n",
+        "idx": 59
+    },
+    {
+        "type": "theorem",
+        "name": "The handshaking lemma",
+        "tags": "",
+        "category": "Graphs",
+        "content": "<p>Each connected component of a graph <span class=\"math inline\">\\(G\\)</span> has an even number of nodes with odd degree.</p>\n",
+        "idx": 60
+    },
+    {
+        "type": "theorem",
+        "name": "The principle of mathematical induction",
+        "tags": "",
+        "category": "Induction",
+        "content": "<p>Let <span class=\"math inline\">\\(P\\)</span> be some predicate. If <span class=\"math inline\">\\(P(0)\\)</span> is true, and <span class=\"math inline\">\\(\\forall k \\in \\mathbb{N}.(P(k) \\implies P(k+1))\\)</span>, then <span class=\"math inline\">\\(\\forall n \\in \\mathbb{N}. ( P(n))\\)</span>.</p>\n",
+        "idx": 61
+    },
+    {
+        "type": "definition",
+        "name": "Proof by induction",
+        "tags": "",
+        "category": "Induction",
+        "content": "<p>To prove a statement of the form <span class=\"math inline\">\\(\\forall n \\in \\mathbb{N}.(P(n))\\)</span> prove:</p>\n<ul>\n<li><p><span class=\"math inline\">\\(P(0)\\)</span>, which is called the base case.</p></li>\n<li><p><span class=\"math inline\">\\(\\forall k \\in \\mathbb{N}.(P(k) \\implies P(k+1))\\)</span>, which is called the inductive step. The assumption of <span class=\"math inline\">\\(P(k)\\)</span> for an arbitrary <span class=\"math inline\">\\(k\\)</span> is called the inductive hypothesis.</p></li>\n</ul>\n<p>TODO: link to guide to induction.</p>\n",
+        "idx": 62
+    },
+    {
+        "type": "theorem",
+        "name": "Complete/Strong induction",
+        "tags": "",
+        "category": "Induction",
+        "content": "<p>Let <span class=\"math inline\">\\(P\\)</span> be some predicate. If <span class=\"math inline\">\\(P(0)\\)</span> is true, and <span class=\"math inline\">\\(\\forall k\\in \\mathbb{N}.(\\forall r \\leq k. (P(r)) \\implies P(k+1))\\)</span>, then <span class=\"math inline\">\\(\\forall n \\in \\mathbb{N}. ( P(n))\\)</span>.</p>\n",
+        "idx": 63
+    },
+    {
+        "type": "definition",
+        "name": "Alphabet, string, language",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>An <em>alphabet</em> <span class=\"math inline\">\\(\\Sigma\\)</span> is a finite set of characters. A <em>string</em> over an alphabet <span class=\"math inline\">\\(\\Sigma\\)</span> is a finite sequence of letters drawn from <span class=\"math inline\">\\(\\Sigma\\)</span>. A <em>language</em> <span class=\"math inline\">\\(L\\)</span> over an alphabet <span class=\"math inline\">\\(\\Sigma\\)</span> is a set of strings over <span class=\"math inline\">\\(\\Sigma\\)</span>. The set of all strings composed of letters from <span class=\"math inline\">\\(\\Sigma\\)</span> is denoted <span class=\"math inline\">\\(\\Sigma^*\\)</span>.</p>\n",
+        "idx": 64
+    },
+    {
+        "type": "definition",
+        "name": "Empty string",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>The <em>empty string</em> has no characters and is denoted <span class=\"math inline\">\\(\\varepsilon\\)</span>.</p>\n",
+        "idx": 65
+    },
+    {
+        "type": "definition",
+        "name": "Language of an Automaton",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>The language of an automaton <span class=\"math inline\">\\(D\\)</span>, is the set of strings it accepts, denoted by <span class=\"math inline\">\\(\\mathcal{L}(D)\\)</span>.</p>\n",
+        "idx": 66
+    },
+    {
+        "type": "definition",
+        "name": "Regular language",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>A language <span class=\"math inline\">\\(L\\)</span> is called <em>regular</em> if there is there is some DFA, <span class=\"math inline\">\\(D\\)</span>, such that <span class=\"math inline\">\\(\\mathcal{L}(D) = L\\)</span>.</p>\n",
+        "idx": 67
+    },
+    {
+        "type": "definition",
+        "name": "Complement of a language",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>The <em>complement</em> of a language <span class=\"math inline\">\\(L\\)</span>, denoted <span class=\"math inline\">\\(\\bar{L}\\)</span> is <span class=\"math inline\">\\(\\Sigma^* - L\\)</span>.</p>\n",
+        "idx": 68
+    },
+    {
+        "type": "definition",
+        "name": "Language concatenation",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>The <em>concatenation</em> of two languages <span class=\"math inline\">\\(L_1, L_2\\)</span> denoted <span class=\"math inline\">\\(L_1L_2 = \\{wx : w \\in L_1\\land x \\in L_2\\}\\)</span>.</p>\n",
+        "idx": 69
+    },
+    {
+        "type": "definition",
+        "name": "Language exponentiation",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>Let <span class=\"math inline\">\\(L^0 = \\{\\varepsilon\\}\\)</span>, then inductively define <span class=\"math inline\">\\(L^{n+1} = LL^{n}\\)</span>.</p>\n",
+        "idx": 70
+    },
+    {
+        "type": "definition",
+        "name": "Kleene Closure",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>If <span class=\"math inline\">\\(L\\)</span> is a language over <span class=\"math inline\">\\(\\Sigma\\)</span>, the <em>Kleene Closure</em> of <span class=\"math inline\">\\(L\\)</span> denoted <span class=\"math inline\">\\(L^*\\)</span> is <span class=\"math inline\">\\(\\{w \\in \\Sigma^* : \\exists n \\in \\mathbb{N}. w \\in L^n\\}\\)</span>. In other words <span class=\"math inline\">\\(x \\in L^*\\)</span> iff <span class=\"math inline\">\\(\\exists n \\in \\mathbb{N}. w \\in L^n\\)</span>.</p>\n",
+        "idx": 71
+    },
+    {
+        "type": "theorem",
+        "name": "Closure properties of regular languages",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>If <span class=\"math inline\">\\(L_1\\)</span> and <span class=\"math inline\">\\(L_2\\)</span> are regular languages, then</p>\n<ul>\n<li><p><span class=\"math inline\">\\(\\overline{L_1}\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(L_1 \\cup L_2\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(L_1 \\cap L_2\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(L_1 L_2\\)</span></p></li>\n<li><p><span class=\"math inline\">\\(L_1^*\\)</span></p></li>\n</ul>\n<p>are all regular.</p>\n",
+        "idx": 72
+    },
+    {
+        "type": "theorem",
+        "name": "Subset construction",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>You can simulate any NFA with a DFA through a subset construction. Thus, a language <span class=\"math inline\">\\(L\\)</span> is regular iff there is a NFA <span class=\"math inline\">\\(N\\)</span> for which <span class=\"math inline\">\\(\\mathcal{L}(N) = L\\)</span>.</p>\n",
+        "idx": 73
+    },
+    {
+        "type": "theorem",
+        "name": "State elimination",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>The state elimination procedure can be used to convert a NFA into a regex.</p>\n",
+        "idx": 74
+    },
+    {
+        "type": "theorem",
+        "name": "Equivalent definitions of regular languages",
+        "tags": "",
+        "category": "Regular Languages",
+        "content": "<p>Let <span class=\"math inline\">\\(L\\)</span> be a language. The following are equivalent</p>\n<ol>\n<li><p><span class=\"math inline\">\\(L\\)</span> is regular.</p></li>\n<li><p>There is a DFA <span class=\"math inline\">\\(D\\)</span> for which <span class=\"math inline\">\\(\\mathcal{L}(D) = L\\)</span></p></li>\n<li><p>There is a NFA <span class=\"math inline\">\\(N\\)</span> for which <span class=\"math inline\">\\(\\mathcal{L}(N) = L\\)</span></p></li>\n<li><p>There is a regex <span class=\"math inline\">\\(R\\)</span> for which <span class=\"math inline\">\\(\\mathcal{L}(R) = L\\)</span>.</p></li>\n</ol>\n",
+        "idx": 75
+    },
+    {
+        "type": "theorem",
+        "name": "$\\{a^nb^n: n \\in \\mathbb{N}\\}$ is not regular",
+        "tags": "",
+        "category": "Irregular Languages",
+        "content": "<p><span class=\"math inline\">\\(\\{a^nb^n: n \\in \\mathbb{N}\\}\\)</span> is not regular</p>\n",
+        "idx": 76
+    },
+    {
+        "type": "definition",
+        "name": "Distinguishable",
+        "tags": "",
+        "category": "Irregular Languages",
+        "content": "<p><span class=\"math inline\">\\(x, y\\)</span> are <em>distinguishable</em> relative to a language <span class=\"math inline\">\\(L\\)</span>, denoted <span class=\"math inline\">\\(x \\not \\equiv_L\\)</span> if there exists some <span class=\"math inline\">\\(w  \\in \\Sigma^*\\)</span> such that <span class=\"math inline\">\\(xw \\in L \\iff yw \\in L\\)</span>. Namely exactly one of <span class=\"math inline\">\\(xw\\)</span> and <span class=\"math inline\">\\(yw\\)</span> is in <span class=\"math inline\">\\(L\\)</span>.</p>\n",
+        "idx": 77
+    },
+    {
+        "type": "theorem",
+        "name": "Myhill-Nerode Theorem",
+        "tags": "",
+        "category": "Irregular Languages",
+        "content": "<p>Let <span class=\"math inline\">\\(L\\)</span> be a language over <span class=\"math inline\">\\(\\Sigma\\)</span>. If there is a set <span class=\"math inline\">\\(S \\subset \\Sigma^*\\)</span> such that</p>\n<ul>\n<li><p><span class=\"math inline\">\\(S\\)</span> is infinite</p></li>\n<li><p>For any <span class=\"math inline\">\\(x, y \\in L\\)</span>, <span class=\"math inline\">\\(x \\neq y \\implies x \\not\\equiv_L y\\)</span> (<span class=\"math inline\">\\(x\\)</span> is distinguishable from <span class=\"math inline\">\\(y\\)</span>).</p></li>\n</ul>\n",
+        "idx": 78
+    },
+    {
+        "type": "definition",
+        "name": "Language of a CFG",
+        "tags": "",
+        "category": "Context Free Languages",
+        "content": "<p>If <span class=\"math inline\">\\(G\\)</span> is a CFG, <span class=\"math inline\">\\(\\mathcal{L}(G) = \\{w \\in \\Sigma^* : S\\to^* w\\}\\)</span>.</p>\n",
+        "idx": 79
+    },
+    {
+        "type": "definition",
+        "name": "Context free language",
+        "tags": "",
+        "category": "Context Free Languages",
+        "content": "<p>A language <span class=\"math inline\">\\(L\\)</span> is called <em>context free</em> if there is a CFG <span class=\"math inline\">\\(G\\)</span> such that <span class=\"math inline\">\\(L = \\mathcal{G}\\)</span></p>\n",
+        "idx": 80
+    },
+    {
+        "type": "theorem",
+        "name": "Every regular language is context free",
+        "tags": "",
+        "category": "Context Free Languages",
+        "content": "<p>Every regular language is context free.</p>\n",
+        "idx": 81
+    },
+    {
+        "type": "definition",
+        "name": "Church-Turing Thesis",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>Every effective method of computation is either equivalent to or weaker than a Turing Machine.</p>\n",
+        "idx": 82
+    },
+    {
+        "type": "definition",
+        "name": "Encoding",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>The <em>encoding</em> of an object <span class=\"math inline\">\\(x\\)</span> is some canonical 01-string representation. Denoted <span class=\"math inline\">\\(\\langle x \\rangle\\)</span>. You can also encode multiple objects denoted <span class=\"math inline\">\\(\\langle x, y, z,... \\rangle\\)</span>.</p>\n",
+        "idx": 83
+    },
+    {
+        "type": "definition",
+        "name": "Accept, reject, loop, halt",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>Let <span class=\"math inline\">\\(M\\)</span> be a Turing Machine.</p>\n<ul>\n<li><p><span class=\"math inline\">\\(M\\)</span> <em>accepts</em> <span class=\"math inline\">\\(w\\)</span> if it enters an accept state after being run on <span class=\"math inline\">\\(w\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(M\\)</span> <em>rejects</em> <span class=\"math inline\">\\(w\\)</span> if it enters an reject state after being run on <span class=\"math inline\">\\(w\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(M\\)</span> <em>loops</em> infinitely on <span class=\"math inline\">\\(w\\)</span> if when run on <span class=\"math inline\">\\(w\\)</span> it never reaches an accept or a reject state.</p></li>\n<li><p><span class=\"math inline\">\\(M\\)</span> <em>halts</em> on <span class=\"math inline\">\\(w\\)</span> if it either rejects or accepts <span class=\"math inline\">\\(w\\)</span>.</p></li>\n</ul>\n<p>Note that if <span class=\"math inline\">\\(M\\)</span> does not accept <span class=\"math inline\">\\(w\\)</span> it doesn\u2019t necessarily reject <span class=\"math inline\">\\(w\\)</span>, it could also loop infinitely.</p>\n",
+        "idx": 84
+    },
+    {
+        "type": "definition",
+        "name": "Language of a Turing Machine",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>The language of a TM, <span class=\"math inline\">\\(M\\)</span>, denoted <span class=\"math inline\">\\(\\mathcal{L}(M)  = \\left\\{ w \\in \\Sigma^* | M \\text{ accepts } w \\right\\}\\)</span>.</p>\n",
+        "idx": 85
+    },
+    {
+        "type": "definition",
+        "name": "Recognizable",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>A language <span class=\"math inline\">\\(L\\)</span> is called <em>recognizable</em> if it is the language of some TM. The set of recognizable languages is called <span class=\"math inline\">\\(\\mathbf{RE}\\)</span>.</p>\n",
+        "idx": 86
+    },
+    {
+        "type": "definition",
+        "name": "Decider",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>A TM, <span class=\"math inline\">\\(M\\)</span> is called a <em>decider</em> if it halts on all inputs.</p>\n",
+        "idx": 87
+    },
+    {
+        "type": "definition",
+        "name": "Decidable",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>A language <span class=\"math inline\">\\(L\\)</span> is called <em>decidable</em> if there is a decider <span class=\"math inline\">\\(M\\)</span> such that <span class=\"math inline\">\\(\\mathcal{L}(M) = L\\)</span>. Equivalently, <span class=\"math inline\">\\(L\\)</span> is <em>decidable</em> if there exists a TM, <span class=\"math inline\">\\(M\\)</span> such that</p>\n<ul>\n<li><p><span class=\"math inline\">\\(w\\in L \\implies M \\text{ accepts } w\\)</span>.</p></li>\n<li><p><span class=\"math inline\">\\(w\\notin L \\implies M \\text{ rejects } w\\)</span>.</p></li>\n</ul>\n<p>The set of all decidable languages is denoted by <span class=\"math inline\">\\(\\mathbf{R}\\)</span>.</p>\n",
+        "idx": 88
+    },
+    {
+        "type": "theorem",
+        "name": "Universal Turing Machine",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>There is a TM, <span class=\"math inline\">\\(U_{TM}\\)</span>, that when run on an input of the form <span class=\"math inline\">\\(\\langle M, w \\rangle\\)</span>, simulates <span class=\"math inline\">\\(M\\)</span> on <span class=\"math inline\">\\(w\\)</span>, and does whatever <span class=\"math inline\">\\(M\\)</span> does on input <span class=\"math inline\">\\(w\\)</span>.</p>\n",
+        "idx": 89
+    },
+    {
+        "type": "definition",
+        "name": "$A_{TM}$",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p><span class=\"math inline\">\\(A_{TM} = \\mathcal{L}(U_{TM})\\)</span>, is the language of the universal turing machine. An equivalent definition is <span class=\"math inline\">\\(A_{TM} = \\{\\langle M, w \\rangle: M \\text{ accepts } w\\}\\)</span>.</p>\n",
+        "idx": 90
+    },
+    {
+        "type": "theorem",
+        "name": "Self-Reference (Kleene's Second Recursion Theorem)",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>It is possible to construct TMs that perform arbitrary computations on their own descriptions.</p>\n",
+        "idx": 91
+    },
+    {
+        "type": "theorem",
+        "name": "Undecidability of $A_{TM}$",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p><span class=\"math inline\">\\(A_{TM} \\notin \\mathbf{R}\\)</span>. A corollary to this is that <span class=\"math inline\">\\(\\mathbf{R} \\neq \\mathbf{RE}\\)</span>.</p>\n",
+        "idx": 92
+    },
+    {
+        "type": "theorem",
+        "name": "Undecidability of $HALT$",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p><span class=\"math inline\">\\(HALT = \\{\\langle M, w \\rangle : M \\text{ halts on } w\\} \\notin \\mathbf{R}\\)</span></p>\n",
+        "idx": 93
+    },
+    {
+        "type": "definition",
+        "name": "Verifier",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>A <em>verifier</em> for a language <span class=\"math inline\">\\(L\\)</span> is a TM, <span class=\"math inline\">\\(V\\)</span>, such that</p>\n<ul>\n<li><p><span class=\"math inline\">\\(V\\)</span> always halts.</p></li>\n<li><p>For any <span class=\"math inline\">\\(w \\in \\Sigma^*\\)</span> we have that <span class=\"math display\">\\[w \\in L \\iff \\exists c \\in \\Sigma^*.(V \\text{ accepts } \\langle w, c \\rangle)\\]</span></p></li>\n</ul>\n<p>A string <span class=\"math inline\">\\(c\\)</span> where <span class=\"math inline\">\\(V\\)</span> accepts <span class=\"math inline\">\\(\\langle w, c \\rangle\\)</span> is called a certificate for <span class=\"math inline\">\\(w\\)</span>.</p>\n",
+        "idx": 94
+    },
+    {
+        "type": "theorem",
+        "name": "Verifiers and $\\mathbf{RE}$",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p><span class=\"math inline\">\\(L \\in \\mathbf{RE} \\iff\\)</span> there exists a verifier for <span class=\"math inline\">\\(L\\)</span>.</p>\n",
+        "idx": 95
+    },
+    {
+        "type": "definition",
+        "name": "Diagonal Language",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p>The <em>diagonal language</em>, <span class=\"math inline\">\\(L_D\\)</span>, is the language containing descriptions of TMs that don\u2019t accept their own description. <span class=\"math display\">\\[L_D = \\{\\langle M \\rangle : M \\text{ is a TM and } \\rangle M \\langle \\notin \\mathcal{L}(M)\\}\\]</span></p>\n",
+        "idx": 96
+    },
+    {
+        "type": "theorem",
+        "name": "$L_D$ is Unrecognizable",
+        "tags": "",
+        "category": "Computability Theory",
+        "content": "<p><span class=\"math inline\">\\(L_D \\notin \\mathbf{RE}\\)</span>.</p>\n",
+        "idx": 97
+    },
+    {
+        "type": "definition",
+        "name": "Polynomial Time",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>An algorithm runs in <em>polynomial time</em> if its runtime is some polynomial in the input length <span class=\"math inline\">\\(n\\)</span>. That is, time <span class=\"math inline\">\\(O(n^k)\\)</span> for some constant <span class=\"math inline\">\\(k\\)</span>.</p>\n",
+        "idx": 98
+    },
+    {
+        "type": "definition",
+        "name": "P",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>The complexity class <span class=\"math inline\">\\(\\mathbf{P}\\)</span> is the set of all problems that can be solved in polynomial time. That is <span class=\"math display\">\\[\\mathbf{P} = \\{L : \\text{ There exists a polynomial time decider for }L\\}\\]</span></p>\n",
+        "idx": 99
+    },
+    {
+        "type": "definition",
+        "name": "Polynomial time verifier",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>A <em>polynomial-time verifier</em> for a language <span class=\"math inline\">\\(L\\)</span> is a TM <span class=\"math inline\">\\(V\\)</span> such that <span class=\"math inline\">\\(V\\)</span> is a verifier for <span class=\"math inline\">\\(L\\)</span> and <span class=\"math inline\">\\(V\\)</span> runs in polynomial-time in the length of the input.</p>\n",
+        "idx": 100
+    },
+    {
+        "type": "definition",
+        "name": "NP",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p><span class=\"math inline\">\\(\\mathbf{NP}\\)</span> is the class of problems that can be verified in polynomial time. Formally, <span class=\"math display\">\\[\\mathbf{NP} = \\{L : \\text{ There is a polynomial time verifier for } L \\}\\]</span></p>\n",
+        "idx": 101
+    },
+    {
+        "type": "definition",
+        "name": "Polytime reducible",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>If <span class=\"math inline\">\\(A\\)</span> and <span class=\"math inline\">\\(B\\)</span> are problems and we can solve <span class=\"math inline\">\\(A\\)</span> by transforming the inputs to <span class=\"math inline\">\\(A\\)</span> (using polynomial time) and using an algorithm for <span class=\"math inline\">\\(B\\)</span> on the transformed input, then we say that <span class=\"math inline\">\\(A\\)</span> is <em>polynomial-time reducible</em> to <span class=\"math inline\">\\(B\\)</span>, written <span class=\"math inline\">\\(A \\leq_p B\\)</span>.</p>\n",
+        "idx": 102
+    },
+    {
+        "type": "theorem",
+        "name": "Reducibility",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>If <span class=\"math inline\">\\(A \\leq_p B\\)</span> and <span class=\"math inline\">\\(B \\in \\mathbf{P}\\)</span>, then <span class=\"math inline\">\\(A \\in \\mathbf{P}\\)</span>. If <span class=\"math inline\">\\(A \\leq_p B\\)</span> and <span class=\"math inline\">\\(B \\in \\mathbf{NP}\\)</span>, then <span class=\"math inline\">\\(A \\in \\mathbf{NP}\\)</span>.</p>\n",
+        "idx": 103
+    },
+    {
+        "type": "definition",
+        "name": "NP-hard",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>A language <span class=\"math inline\">\\(L\\)</span> is called <span class=\"math inline\">\\(\\mathbf{NP}\\)</span>-hard if for every <span class=\"math inline\">\\(A \\in NP\\)</span>, we have that <span class=\"math inline\">\\(A \\leq_p L\\)</span>.</p>\n",
+        "idx": 104
+    },
+    {
+        "type": "definition",
+        "name": "NP-complete",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>A language <span class=\"math inline\">\\(L\\)</span> is called <span class=\"math inline\">\\(\\mathbf{NP}\\)</span>-complete if <span class=\"math inline\">\\(L\\)</span> is <span class=\"math inline\">\\(\\mathbf{NP}\\)</span>-hard and <span class=\"math inline\">\\(L \\in \\mathbf{NP}\\)</span>.</p>\n",
+        "idx": 105
+    },
+    {
+        "type": "theorem",
+        "name": "A path to resolving P vs. NP",
+        "tags": "",
+        "category": "Complexity Theory",
+        "content": "<p>There is a <span class=\"math inline\">\\(\\mathbf{NP}\\)</span>-complete language in <span class=\"math inline\">\\(\\mathbf{P}\\)</span> if and only if <span class=\"math inline\">\\(\\mathbf{P} = \\mathbf{NP}\\)</span>.</p>\n",
+        "idx": 106
+    },
+    {
+        "type": "theorem",
+        "name": "SAT is NP-complete (Cook-Levin Theorem)",
+        "tags": "SAT complete, cook",
+        "category": "Complexity Theory",
+        "content": "<p><span class=\"math display\">\\[SAT = \\{\\langle \\varphi \\rangle : \\varphi \\text{ is a satisfiable PL formula}\\}\\]</span> is <span class=\"math inline\">\\(\\mathbf{NP}\\)</span>-complete.</p>\n",
+        "idx": 107
+    }
+]

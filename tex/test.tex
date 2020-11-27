@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath, amsfonts, amssymb, amsthm, xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[shortlabels]{enumitem}
+\usepackage{sectsty}
+
+\definecolor{titlecolor}{HTML}{383B57}
+\definecolor{sectioncolor}{HTML}{383B57}
+
+\setlist[enumerate,1]{a.)} % Level 1, 2 enumerate styles
+\setlist[enumerate,2]{i.)}
+\setlist[itemize,1]{$\cdot$} % Small dot
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\sectionfont{\color{sectioncolor}}  % sets colour of sections
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\DeclareMathOperator{\entails}{\Vdash}
+\DeclareMathOperator{\forces}{\Vdash}
+\DeclareMathOperator{\proves}{\vdash}
+\DeclareMathOperator{\tequiv}{\models \leftmodels}
+
+\renewcommand{\i}{^{-1}}
+
+\begin{document}
+\begin{center}
+    {\Huge \bf \color{titlecolor} Theorems and Definitions} \\ \vspace{1em}
+    {Harry Sha} \\ \vspace{0.5em}
+    {\today}
+\end{center}
+
+\tableofcontents
+
+\section{Real Analysis}
+
+\begin{definition}[Metric Space]
+% tags: wefoijawefaoweifj
+A set $X$ and function $d$ is a metric space if for all $x, y, z \in X$ the following hold:
+    \begin{enumerate}
+        \item $d(x, x) = 0$
+        \item $d(x, y) = d(y, x)$
+        \item $d(x, z) \leq d(x, y) + d(y, z)$
+    \end{enumerate}
+\end{definition}
+
+\section{Probability}
+\begin{theorem}[awefopij]
+    % tags: hey there s
+
+\end{theorem}
+    
+\end{document}

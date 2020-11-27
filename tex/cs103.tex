@@ -1,0 +1,513 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{hyperref}
+\usepackage{amsmath, amsfonts, amssymb, amsthm, xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[shortlabels]{enumitem}
+\usepackage{sectsty}
+\usepackage{cancel}
+
+\definecolor{titlecolor}{HTML}{383B57}
+\definecolor{sectioncolor}{HTML}{383B57}
+
+\setlist[enumerate,1]{a.)} % Level 1, 2 enumerate styles
+\setlist[enumerate,2]{i.)}
+\setlist[itemize,1]{$\cdot$} % Small dot
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\sectionfont{\color{sectioncolor}}  % sets colour of sections
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\DeclareMathOperator{\entails}{\Vdash}
+\DeclareMathOperator{\forces}{\Vdash}
+\DeclareMathOperator{\proves}{\vdash}
+\DeclareMathOperator{\tequiv}{\models \leftmodels}
+
+\renewcommand{\i}{^{-1}}
+
+\begin{document}
+\begin{center}
+    {\Huge \bf \color{titlecolor} CS103 Oracle} \\ \vspace{1em}
+    % { } \\ \vspace{0.5em}
+    {\today}
+\end{center}
+
+\tableofcontents
+
+\section{Numbers}
+\begin{definition}[Odd and Even]
+    An integer $n$ is \emph{even} if there is some integer $k$ such that $n = 2k$. An integer $n$ is \emph{odd} if there is some integer $k$ such that $n = 2k+1$.
+\end{definition}
+\begin{theorem}[Square of even number is even]
+    If $n$ is an even integer, then $n^2$ is also even.
+\end{theorem}
+\begin{theorem}[Square root of 2 is irrational]
+    $\sqrt{2}$ is irrational.
+\end{theorem}
+
+\section{Sets}
+\begin{definition}[Empty Set]
+    The empty set, denoted $\emptyset$ or $\{\}$ is the set containing no elements.
+\end{definition}
+\begin{definition}[Subset]
+    A set $A$ is a \emph{subset} of another set $B$ if for all objects $x$, if $x \in A$, then $x \in B$, that is all elements of $A$ are also elements of $B$.
+\end{definition}
+\begin{definition}[Set equality]
+    A set $A$ is \emph{equal} to another set $B$ if $A \subseteq B$ and $B \subseteq A$.
+\end{definition}
+\begin{theorem}[Transitivity of Subset]
+    If $A \subseteq B$, and $B \subseteq C$, then $A \subseteq C$
+\end{theorem}
+\begin{definition}[Union]
+    $A \cup B = \{x : x \in A \text{ or } x \in B \text{ or both }\}$
+\end{definition}
+\begin{definition}[Intersection]
+    $A \cap B = \{x : x \in A \text{ and } x \in B\}$
+\end{definition}
+\begin{definition}[Difference]
+    $A - B = \{x : x \in A \text{ and } x \notin B\}$
+\end{definition}
+\begin{definition}[Symmetric difference]
+    $A \Delta B = \{x : x \in A \text{ and } x \notin B \text{ or } x \in B \text{ and } x \notin A\}$
+\end{definition}
+\begin{theorem}[Cantor's theorem]
+    If $S$ is a set, then $|S| < |\wp(S)|$. That is, the cardinality of any set is strictly smaller than the cardinality of its powerset.
+\end{theorem}
+\begin{definition}[Disjoint]
+    Two sets $A$, $B$ are \emph{disjoint} if their intersection is the emptyset.
+\end{definition}
+\begin{definition}[Partition]
+    A \emph{partition} of a set is a way of splitting it into disjoint, non-empty subsets so that every element belongs to exactly one subset.
+\end{definition}
+
+\section{Logic}
+\begin{definition}[Vacuous Truths]
+    A statement of the form $\forall x \in A. (P(x))$ is called vacuously true if $A = \emptyset$. An implication $p \implies q$ is called vacuously true if $p$ is false.
+\end{definition}
+
+\begin{definition}[Negation]
+    If $\varphi$ is a proposition, its \emph{negation} $\neg \varphi$ is a proposition that is true whenever $\varphi$ is false, and false whenever $\varphi$ is true. TODO link guide to negations.
+\end{definition}
+\begin{definition}[Contrapositive]
+    The \emph{contrapositive} of an implication $p \implies q$ is the equivalent statement $\neg q \implies \neg p$.
+\end{definition}
+\begin{definition}[Proof by contrapositive]
+    One way to prove an implication $p \implies q$ is to prove the contrapositive statement: $\neg q \implies \neg p$.
+\end{definition}
+\begin{definition}[Proof by contradiction]
+    To prove a proposition $P$. Assume its negation, $\neg P$, and find some sort of contradiction/inconsistency.
+\end{definition}
+\begin{definition}[Propositional logic]
+    TODO link.
+\end{definition}
+\begin{theorem}[De Morgan's Laws]
+    \begin{enumerate}
+        \item $\neg(a \land b) = \neg a \lor \neg b$
+        \item $\neg(a \lor b) = \neg a \land \neg b$
+    \end{enumerate}
+\end{theorem}
+\begin{definition}[Aristotelian Forms]
+    \begin{enumerate}
+        \item ``All A's are B's": $\forall x. (A(x) \implies B(x))$
+        \item ``Some A's are B's": $\exists x. (A(x) \land B(x))$
+        \item ``No A's are B's": $\exists x. (A(x) \implies \neg B(x))$
+        \item ``Some A's aren't B's": $\exists x. (A(x) \land \neg B(x))$
+    \end{enumerate}
+\end{definition}
+
+\section{Binary Relations}
+\begin{definition}[Binary Relation]
+    A \emph{binary relation} over a set $A$ is a predicate $R$ that can be applied to pairs of elements drawn from $A$. If $R$ holds for two elements $a, b \in A$, we write $aRb$. If $R$ does not hold we write $a \cancel R  b$
+\end{definition}
+\begin{definition}[Reflexivity]
+    A binary relation $R$ over a set $A$ is \emph{reflexive} if everything relates to itself.
+    $$\forall a \in A.(aRa).$$
+\end{definition}
+\begin{definition}[Irreflexivity]
+    A binary relation $R$ over a set $A$ is \emph{irreflexive} if nothing relates to itself.
+    $$\forall a \in A.(a\cancel{R}a).$$
+\end{definition}
+\begin{definition}[Symmetric]
+    A binary relation $R$ over a set $A$ is \emph{symmetric} if
+    $$\forall a, b\in A.(aRb \implies bRa).$$
+\end{definition}
+\begin{definition}[Asymmetric]
+    A binary relation $R$ over a set $A$ is \emph{asymmetric} if
+    $$\forall a, b\in A.(aRb \implies b\cancel{R}a).$$
+\end{definition}
+\begin{definition}[Transitive]
+    A binary relation $R$ over a set $A$ is \emph{transitive} if
+    $$\forall a, b,c\in A.((aRb \land b R c) \implies aRc).$$
+\end{definition}
+\begin{definition}[Cyclic]
+    A binary relation $R$ over a set $A$ is \emph{cyclic} if
+    $$\forall a, b,c\in A.((aRb \land b R c) \implies cRa).$$
+\end{definition}
+\begin{definition}[Equivalence relation]
+    A relation $R$ over a set $A$ is called an \emph{equivalence relation} if it is reflexive, symmetric and transitive. 
+\end{definition}
+\begin{definition}[Equivalence class]
+    If $R$ is an equivalence relation over a set $A$, and $a \in A$. The \emph{equivalence class} of $a$, denoted by $[a]_R$ is the set of elements that relate to $a$, formally, $$[a]_R = \left\{b \in A : a R b\right\}.$$ 
+\end{definition}
+\begin{theorem}[Fundamental theorem of equivalence classes]
+    Let $R$ be an equivalence relation over a set $A$. Then each element $a \in A$ is in exactly one equivalence class of $R$. In other words, the equivalence classes of $R$ partition $A$.
+\end{theorem}
+\begin{definition}[Strict order]
+    A relation $R$ over a set $A$ is a \emph{strict order} if it is irreflexive, asymmetric, and transitive.
+\end{definition}
+
+\section{Function}
+\begin{definition}[Function]
+    $f: A \to B$ is called a \emph{function} from $A$ (domain) to $B$ (codomain) if it obeys the domain/codomain rule
+    $$\forall x \in A.(f(x) \in B),$$
+    and is deterministic
+    $$
+    \forall x, y \in A.(x = y \implies f(x) = f(y)).
+    $$
+\end{definition}
+\begin{definition}[Function composition]
+    If $f:A \to B$ and $g:B \to C$ are functions, the \emph{composition}, $g \circ f : A \to C$, is a function such that for all $x \in A.(g \circ f(x) = g(f(x)))$
+\end{definition}
+\begin{definition}[Injective]
+    A function $f: A\to B$ is \emph{injective} if 
+    $$\forall x,y \in A.(f(x) = f(y) \implies x = y),$$
+    or equivalently, 
+    $$\forall x,y \in A.(x \neq y \implies f(x) \neq f(y)).$$
+\end{definition}
+\begin{definition}[Surjective]
+    A function $f: A\to B$ is \emph{surjective} if 
+    $$\forall b \in B.\exists a \in A. (f(a) = b).$$
+\end{definition}
+\begin{definition}[Bijective]
+    A function $f: A\to B$ is \emph{bijective} if it is both injective and surjective.
+\end{definition}
+\begin{definition}[Inverse]
+    The \emph{inverse} of a function $f:A \to B$ is a function $f^{-1} B \to A$ that satisfies the following: 
+    $$
+    \forall a \in A.(f^{-1}(f(a)) = a),
+    $$
+    and 
+    $$
+    \forall b \in B.(f(f^{-1}(b)) = b).
+    $$
+\end{definition}
+
+\begin{definition}[Cardinality]
+    If $X$ and $Y$ are sets, $|X| = |Y|$ if there exists a bijection $f: X \to Y$, and $|X| \neq |Y|$ if every function from $X$ to $Y$ is not a bijection.
+\end{definition}
+
+\section{Graphs}
+
+\begin{definition}[Graph]
+    A \emph{graph} $G = (V, E)$ is an tuple of two sets $V$, and $E$. Where $V$ is a set of vertices and $E$ is a set of edges which are unordered pairs of vertices. A directed graph is the same but edges are ordered pairs instead of unordered. In this class we mainly care about undirected graphs. Self loops are not allowed in this class (no vertex can have an edge to itself).
+\end{definition}
+
+\begin{definition}[Adjacent]
+    If we have a graph $G = (V, E)$, two vertices $u, v$ are \emph{adjacent} if $\{u, v\} \in E$, that is, there is an edge between $u$ and $v$.
+\end{definition}
+\begin{definition}[Degree]
+    The \emph{degree} of a vertex $v$ is the number of nodes that $v$ is adjacent to.
+\end{definition}
+\begin{definition}[Path]
+    A \emph{path} is a sequence of one or more nodes $v_1,...,v_n$ such that any two consecutive nodes are adjacent. The length of a path is the number of edges in the path.
+\end{definition}
+\begin{definition}[Cycle]
+    A \emph{cycle} is a path that starts and ends at the same node.
+\end{definition}
+\begin{definition}[Simple path]
+    A \emph{simple path} is a path that does not repeat any nodes or edges.
+\end{definition}
+\begin{definition}[Simple cycle]
+    A \emph{simple cycle} is a cycle that does not repeat any vertices except the first/last one.
+\end{definition}
+\begin{definition}[Connected]
+    Two nodes $u, v$ in a graph are \emph{connected} if there is a path from one to the other. A graph $G$ is called \emph{connected} if all pairs of nodes are connected.
+\end{definition}
+\begin{definition}[Connected component]
+    The connected component of a vertex $v$, denoted $[v] = \{x \in V: v \text{ is connected to } x\}$.
+\end{definition}
+\begin{theorem}[Connected is an equivalence relation]
+    The connectivity relation on $V$ is an equivalence relation, and the equivalence classes of this relation are connected components.
+\end{theorem}
+\begin{definition}[Planar graph]
+    A graph is called \emph{planar} if there is some way to draw it in 2D plane without any edges crossing.
+\end{definition}
+\begin{definition}[k-coloring]
+    A $k$-\emph{coloring} of a graph is a way to color each of the vertices such that no adjacent vertices are the same color. Formally, a $k$-coloring is a function $f: V \to \{1, 2, ...,k\}$ such that $\forall u, v.(\{u, v\}\in E \implies f(u) \neq f(v))$.
+\end{definition}
+\begin{definition}[k-colorable]
+    A graph is called $k$-\emph{colorable} if a $k$-coloring exists.
+\end{definition}
+\begin{definition}[Chromatic number]
+    The smallest $k$ for a graph $G$ is $k$-colorable is its \emph{chromatic number}.
+\end{definition}
+\begin{theorem}[Pigeonhole principle]
+    If there are $m$ objects distributed into $n$ bins with $m > n$, then at least one bin will contain at least two objects.
+\end{theorem}
+\begin{definition}
+    A \emph{tree} is a connected graph with no simple cycles. They are maximally acyclic in that adding any edge creates a cycle, and minimally connected in that remove any edge makes the graph disconnected.
+\end{definition}
+
+\begin{theorem}[Two nodes of same degree]
+    In any graph with at least 2 nodes, there are at least nodes of the same degree.
+\end{theorem}
+\begin{theorem}[Generalized pigeonhole principle]
+    If you distribute $m$ objects into $n$ bins, then
+    \begin{itemize}
+        \item Some bin will have at least $\lceil m/n \rceil$
+        \item Some bin will have at most $\lfloor m/n \rfloor$
+    \end{itemize}
+\end{theorem}
+\begin{theorem}[Friends and strangers]
+    In any group of $6$ people where every pair of people are either friends or strangers, there must be a group of $3$ mutual friends or a group of $3$ mutual strangers.
+\end{theorem}
+\begin{theorem}[Ramsey's theorem]
+    For any natural number $n$, there is a natural number $R(n)$ such that if the edges of an $R(n)$-clique are colored red or blue, the resulting graph will contain either a red-$n$-clique or a blue-$n$-clique.
+\end{theorem}
+\begin{theorem}[The handshaking lemma]
+    Each connected component of a graph $G$ has an even number of nodes with odd degree.
+\end{theorem}
+\section{Induction}
+\begin{theorem}[The principle of mathematical induction]
+    Let $P$ be some predicate. If $P(0)$ is true, and $\forall k \in \mathbb{N}.(P(k) \implies P(k+1))$, then $\forall n \in \mathbb{N}. ( P(n))$.
+\end{theorem}
+\begin{definition}[Proof by induction]
+    To prove a statement of the form $\forall n \in \mathbb{N}.(P(n))$ prove:
+    \begin{itemize}
+        \item $P(0)$, which is called the base case.
+        \item $\forall k \in \mathbb{N}.(P(k) \implies P(k+1))$, which is called the inductive step. The assumption of $P(k)$ for an arbitrary $k$ is called the inductive hypothesis.
+    \end{itemize}
+    TODO: link to guide to induction.
+\end{definition}
+\begin{theorem}[Complete/Strong induction]
+    Let $P$ be some predicate. If $P(0)$ is true, and $\forall k\in \mathbb{N}.(\forall r \leq k. (P(r)) \implies P(k+1))$, then $\forall n \in \mathbb{N}. ( P(n))$.
+\end{theorem}
+
+\section{Regular Languages}
+\begin{definition}[Alphabet, string, language]
+    An \emph{alphabet} $\Sigma$ is a finite set of characters. A \emph{string} over an alphabet $\Sigma$ is a finite sequence of letters drawn from $\Sigma$. A \emph{language} $L$ over an alphabet $\Sigma$ is a set of strings over $\Sigma$. The set of all strings composed of letters from $\Sigma$ is denoted $\Sigma^*$.
+\end{definition}
+\begin{definition}[Empty string]
+    The \emph{empty string} has no characters and is denoted $\varepsilon$.
+\end{definition}
+\begin{definition}[Language of an Automaton]
+    The language of an automaton $D$, is the set of strings it accepts, denoted by $\mathcal{L}(D)$.
+\end{definition}
+\begin{definition}[Regular language]
+    A language $L$ is called \emph{regular} if there is there is some DFA, $D$, such that $\mathcal{L}(D) = L$.
+\end{definition}
+\begin{definition}[Complement of a language]
+    The \emph{complement} of a language $L$, denoted $\bar{L}$ is $\Sigma^* - L$.
+\end{definition}
+\begin{definition}[Language concatenation]
+    The \emph{concatenation} of two languages $L_1, L_2$ denoted $L_1L_2 = \{wx : w \in L_1\land x \in L_2\}$.
+\end{definition}
+\begin{definition}[Language exponentiation]
+    Let $L^0 = \{\varepsilon\}$, then inductively define $L^{n+1} = LL^{n}$.
+    
+\end{definition}
+\begin{definition}[Kleene Closure]
+    If $L$ is a language over $\Sigma$, the \emph{Kleene Closure} of $L$ denoted $L^*$ is  $\{w \in \Sigma^* : \exists n \in \mathbb{N}. w \in L^n\}$. In other words $x \in L^*$ iff $\exists n \in \mathbb{N}. w \in L^n$.
+\end{definition}
+
+\begin{theorem}[Closure properties of regular languages]
+    If $L_1$ and $L_2$ are regular languages, then
+    \begin{itemize}
+        \item $\overline{L_1}$
+        \item $L_1 \cup L_2$
+        \item $L_1 \cap L_2$
+        \item $L_1 L_2$
+        \item $L_1^*$
+    \end{itemize}
+    are all regular.
+\end{theorem}
+
+\begin{theorem}[Subset construction]
+    You can simulate any NFA with a DFA through a subset construction. Thus, a language $L$ is regular iff there is a NFA $N$ for which $\mathcal{L}(N) = L$.
+\end{theorem}
+
+\begin{theorem}[State elimination]
+    The state elimination procedure can be used to convert a NFA into a regex.
+\end{theorem}
+
+\begin{theorem}[Equivalent definitions of regular languages]
+    Let $L$ be a language. The following are equivalent
+    \begin{enumerate}
+        \item $L$ is regular.
+        \item There is a DFA $D$ for which $\mathcal{L}(D) = L$
+        \item There is a NFA $N$ for which $\mathcal{L}(N) = L$
+        \item There is a regex $R$ for which $\mathcal{L}(R) = L$.
+    \end{enumerate}
+\end{theorem}
+
+\section{Irregular Languages}
+
+\begin{theorem}[$\{a^nb^n: n \in \mathbb{N}\}$ is not regular]
+    $\{a^nb^n: n \in \mathbb{N}\}$ is not regular
+\end{theorem}
+
+\begin{definition}[Distinguishable]
+    $x, y$ are \emph{distinguishable} relative to a language $L$, denoted $x \not \equiv_L$ if there exists some $w  \in \Sigma^*$ such that $xw \in L \iff yw \in L$. Namely exactly one of $xw$ and $yw$ is in $L$.
+\end{definition}
+
+\begin{theorem}[Myhill-Nerode Theorem]
+    Let $L$ be a language over $\Sigma$. If there is a set $S \subset \Sigma^*$ such that 
+    \begin{itemize}
+        \item $S$ is infinite
+        \item For any $x, y \in L$, $x \neq y \implies x \not\equiv_L y$ ($x$ is distinguishable from $y$).
+    \end{itemize}
+\end{theorem}
+
+\section{Context Free Languages}
+\begin{definition}[Language of a CFG]
+    If $G$ is a CFG, $\mathcal{L}(G) = \{w \in \Sigma^* : S\to^* w\}$.
+\end{definition}
+\begin{definition}[Context free language]
+    A language $L$ is called \emph{context free} if there is a CFG $G$ such that $L = \mathcal{G}$
+\end{definition}
+\begin{theorem}[Every regular language is context free]
+Every regular language is context free.
+\end{theorem}
+
+\section{Computability Theory}
+\begin{definition}[Church-Turing Thesis]
+Every effective method of computation is either equivalent to or weaker than a Turing Machine.
+\end{definition}
+
+\begin{definition}[Encoding]
+    The \emph{encoding} of an object $x$ is some canonical 01-string representation. Denoted $\langle x \rangle$. You can also encode multiple objects denoted $\langle x, y, z,... \rangle$.
+\end{definition}
+
+\begin{definition}[Accept, reject, loop, halt]
+    Let $M$ be a Turing Machine.
+    \begin{itemize}
+        \item $M$ \emph{accepts} $w$ if it enters an accept state after being run on $w$.
+        \item $M$ \emph{rejects} $w$ if it enters an reject state after being run on $w$.
+        \item $M$ \emph{loops} infinitely on $w$ if when run on $w$ it never reaches an accept or a reject state.
+        \item $M$ \emph{halts} on $w$ if it either rejects or accepts $w$.
+    \end{itemize}
+    Note that if $M$ does not accept $w$ it doesn't necessarily reject $w$, it could also loop infinitely.
+\end{definition}
+
+\begin{definition}[Language of a Turing Machine]
+    The language of a TM, $M$, denoted $\mathcal{L}(M)  = \left\{ w \in \Sigma^* | M \text{ accepts } w \right\}$.
+\end{definition}
+
+\begin{definition}[Recognizable]
+    A language $L$ is called \emph{recognizable} if it is the language of some TM. The set of recognizable languages is called $\mathbf{RE}$.
+\end{definition}
+
+\begin{definition}[Decider]
+    A TM, $M$ is called a \emph{decider} if it halts on all inputs.
+\end{definition}
+
+\begin{definition}[Decidable]
+    A language $L$ is called \emph{decidable} if there is a decider $M$ such that $\mathcal{L}(M) = L$. Equivalently, $L$ is \emph{decidable} if there exists a TM, $M$ such that 
+    \begin{itemize}
+        \item $w\in L \implies M \text{ accepts } w$.
+        \item $w\notin L \implies M \text{ rejects } w$.
+    \end{itemize}
+    The set of all decidable languages is denoted by $\mathbf{R}$.
+\end{definition}
+\begin{theorem}[Universal Turing Machine]
+    There is a TM, $U_{TM}$, that when run on an input of the form $\langle M, w \rangle$, simulates $M$ on $w$, and does whatever $M$ does on input $w$.
+\end{theorem}
+
+\begin{definition}[$A_{TM}$]
+    $A_{TM} = \mathcal{L}(U_{TM})$, is the language of the universal turing machine. An equivalent definition is $A_{TM} = \{\langle M, w \rangle: M \text{ accepts } w\}$.
+\end{definition}
+
+\begin{theorem}[Self-Reference (Kleene's Second Recursion Theorem)]
+    It is possible to construct TMs that perform arbitrary computations on their own descriptions.
+\end{theorem}
+
+\begin{theorem}[Undecidability of $A_{TM}$]
+    $A_{TM} \notin \mathbf{R}$. A corollary to this is that $\mathbf{R} \neq \mathbf{RE}$.
+\end{theorem}
+
+\begin{theorem}[Undecidability of $HALT$]
+    $HALT = \{\langle M, w \rangle : M \text{ halts on } w\} \notin \mathbf{R}$
+\end{theorem}
+
+\begin{definition}[Verifier]
+    A \emph{verifier} for a language $L$ is a TM, $V$, such that 
+    \begin{itemize}
+        \item $V$ always halts.
+        \item For any $w \in \Sigma^*$ we have that 
+        $$w \in L \iff \exists c \in \Sigma^*.(V \text{ accepts } \langle w, c \rangle)$$
+    \end{itemize}
+    A string $c$ where $V$ accepts $\langle w, c \rangle$ is called a certificate for $w$.
+\end{definition}
+
+\begin{theorem}[Verifiers and $\mathbf{RE}$]
+    $L \in \mathbf{RE} \iff $ there exists a verifier for $L$.
+\end{theorem}
+
+\begin{definition}[Diagonal Language]
+    The \emph{diagonal language}, $L_D$, is the language containing descriptions of TMs that don't accept their own description.
+    $$L_D = \{\langle M \rangle : M \text{ is a TM and } \rangle M \langle \notin \mathcal{L}(M)\}$$
+\end{definition}
+
+\begin{theorem}[$L_D$ is Unrecognizable]
+    $L_D \notin \mathbf{RE}$.
+\end{theorem}
+
+\section{Complexity Theory}
+\begin{definition}[Polynomial Time]
+    An algorithm runs in \emph{polynomial time} if its runtime is some polynomial in the input length $n$. That is, time $O(n^k)$ for some constant $k$.
+\end{definition}
+\begin{definition}[P]
+    The complexity class $\mathbf{P}$ is the set of all problems that can be solved in polynomial time. That is 
+    $$\mathbf{P} = \{L : \text{ There exists a polynomial time decider for }L\}$$
+\end{definition}
+\begin{definition}[Polynomial time verifier]
+    A \emph{polynomial-time verifier} for a language $L$ is a TM $V$ such that $V$ is a verifier for $L$ and $V$ runs in polynomial-time in the length of the input.
+\end{definition}
+\begin{definition}[NP]
+    $\mathbf{NP}$ is the class of problems that can be verified in polynomial time. Formally, 
+    $$
+    \mathbf{NP} = \{L : \text{ There is a polynomial time verifier for } L \}
+    $$
+\end{definition}
+\begin{definition}[Polytime reducible]
+    If $A$ and $B$ are problems and we can solve $A$ by transforming the inputs to $A$ (using polynomial time) and using an algorithm for $B$ on the transformed input, then we say that $A$ is \emph{polynomial-time reducible} to $B$, written $A \leq_p B$.
+\end{definition}
+
+\begin{theorem}[Reducibility]
+    If $A \leq_p B$ and $B \in \mathbf{P}$, then $A \in \mathbf{P}$.
+    If $A \leq_p B$ and $B \in \mathbf{NP}$, then $A \in \mathbf{NP}$.
+\end{theorem}
+
+\begin{definition}[NP-hard]
+    A language $L$ is called $\mathbf{NP}$-hard if for every $A \in NP$, we have that $A \leq_p L$.
+\end{definition}
+\begin{definition}[NP-complete]
+    A language $L$ is called $\mathbf{NP}$-complete if $L$ is $\mathbf{NP}$-hard and $L \in \mathbf{NP}$.
+\end{definition}
+\begin{theorem}[A path to resolving P vs. NP]
+    There is a $\mathbf{NP}$-complete language in $\mathbf{P}$ if and only if $\mathbf{P} = \mathbf{NP}$.
+\end{theorem}
+\begin{theorem}[SAT is NP-complete (Cook-Levin Theorem)]
+    % tags: SAT complete, cook 
+    $$SAT = \{\langle \varphi \rangle : \varphi \text{ is a satisfiable PL formula}\}$$ is $\mathbf{NP}$-complete.
+\end{theorem}
+
+
+
+
+
+
+
+
+\end{document}
