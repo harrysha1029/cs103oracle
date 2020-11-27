@@ -1,3 +1,4 @@
+# CS 103 Oracle
 A searchable website containing key definitions and theorems from CS103: Mathematical Foundations of Computer at Stanford.
 
 # Adding and updating
@@ -10,7 +11,7 @@ To add a new theorem or definition, go to `tex/cs103.tex` and simply add definit
 
 ```latex
 \begin{theorem}[<Name of theorem>]
-    % tags: SAT complete, cook 
+    % tags: SAT NP cook complete
     <content>
 \end{theorem}
 ```
@@ -18,10 +19,10 @@ To add a new theorem or definition, go to `tex/cs103.tex` and simply add definit
 Where tags is an optional line containing some tags to be used in the search.
 
 ## Convert
-To update the website, run `python compile.py` and the tex will be parsed into html.
+To update the website, run `python compile.py` and the tex will be parsed into html. You'll also need to commit everything and push. 
 
 ## Just the pdf
-You can also simply compile the tex file into a pdf if you don't need the website.
+You can also simply compile the tex file into a pdf if you don't need the website. The current version is at `tex/cs103.pdf`.
 
 ## Changing search criterion
-This project uses [lunr.js](https://lunrjs.com/guides/searching.html) to implement the search.
+This project uses [lunr.js](https://lunrjs.com/guides/searching.html) to implement the search. You can edit the search criterion in `scripts.js`.
