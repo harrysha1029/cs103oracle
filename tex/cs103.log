@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.13)  26 NOV 2020 11:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Arch Linux) (preloaded format=pdflatex 2020.9.13)  26 NOV 2020 19:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -376,15 +376,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] [6] [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 514.
  [10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 514.
  (/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 514.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 514.
 Package rerunfilecheck Info: File `cs103.out' has not changed.
 (rerunfilecheck)             Checksum: 7D2ACD58A4D8B7442DC247FE563E74C6;576.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 513.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 514.
  ) 
 Here is how much of TeX's memory you used:
  8281 strings out of 480478
@@ -395,7 +395,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  34i,12n,37p,462b,423s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.pdf (10 pages, 143254 bytes).
+Output written on /home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.pdf (10 pages, 143274 bytes).
 PDF statistics:
  299 PDF objects out of 1000 (max. 8388607)
  274 compressed objects within 3 object streams

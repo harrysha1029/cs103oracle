@@ -628,7 +628,7 @@
         "name": "Myhill-Nerode Theorem",
         "tags": "",
         "category": "Irregular Languages",
-        "content": "<p>Let <span class=\"math inline\">\\(L\\)</span> be a language over <span class=\"math inline\">\\(\\Sigma\\)</span>. If there is a set <span class=\"math inline\">\\(S \\subset \\Sigma^*\\)</span> such that</p>\n<ul>\n<li><p><span class=\"math inline\">\\(S\\)</span> is infinite</p></li>\n<li><p>For any <span class=\"math inline\">\\(x, y \\in L\\)</span>, <span class=\"math inline\">\\(x \\neq y \\implies x \\not\\equiv_L y\\)</span> (<span class=\"math inline\">\\(x\\)</span> is distinguishable from <span class=\"math inline\">\\(y\\)</span>).</p></li>\n</ul>\n",
+        "content": "<p>Let <span class=\"math inline\">\\(L\\)</span> be a language over <span class=\"math inline\">\\(\\Sigma\\)</span>. If there is a set <span class=\"math inline\">\\(S \\subset \\Sigma^*\\)</span> such that</p>\n<ul>\n<li><p><span class=\"math inline\">\\(S\\)</span> is infinite</p></li>\n<li><p>For any <span class=\"math inline\">\\(x, y \\in L\\)</span>, <span class=\"math inline\">\\(x \\neq y \\implies x \\not\\equiv_L y\\)</span> (<span class=\"math inline\">\\(x\\)</span> is distinguishable from <span class=\"math inline\">\\(y\\)</span>),</p></li>\n</ul>\n<p>Then <span class=\"math inline\">\\(L\\)</span> is not regular.</p>\n",
         "idx": 78
     },
     {

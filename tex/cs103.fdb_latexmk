@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1606420528 "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.tex" "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.pdf" "cs103" 1606420528
-  "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.aux" 1606420528 2031 de720bc66a5e3c00f2511eaab6bde4ed ""
-  "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.tex" 1606420527 23450 e09206c6e17672647d12c27217ce9a80 ""
+["pdflatex"] 1606448445 "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.tex" "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.pdf" "cs103" 1606448446
+  "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.aux" 1606448445 2031 de720bc66a5e3c00f2511eaab6bde4ed ""
+  "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.tex" 1606448444 23479 6b0c12f340d0e68ed3171b3bacd34b77 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1591545468 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1591545468 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1591545468 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -93,15 +93,15 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1591545468 33301 a3134070eacafb10b1f371612ce2650d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1600028175 4727905 1b81189106e2406a827797a37162c1c0 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1600028143 2514049 9f531b8547e019f8682691ab26092f2d ""
-  "cs103.aux" 1606420528 2031 de720bc66a5e3c00f2511eaab6bde4ed "pdflatex"
-  "cs103.out" 1606420528 576 7d2acd58a4d8b7442dc247fe563e74c6 "pdflatex"
-  "cs103.tex" 1606420527 23450 e09206c6e17672647d12c27217ce9a80 ""
-  "cs103.toc" 1606420528 851 6c3cbf89759d989b1f4f15c93e88b17a "pdflatex"
+  "cs103.aux" 1606448445 2031 de720bc66a5e3c00f2511eaab6bde4ed "pdflatex"
+  "cs103.out" 1606448445 576 7d2acd58a4d8b7442dc247fe563e74c6 "pdflatex"
+  "cs103.tex" 1606448444 23479 6b0c12f340d0e68ed3171b3bacd34b77 ""
+  "cs103.toc" 1606448445 851 6c3cbf89759d989b1f4f15c93e88b17a "pdflatex"
   (generated)
   "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.pdf"
-  "cs103.pdf"
-  "cs103.out"
-  "cs103.aux"
   "cs103.log"
+  "cs103.out"
   "cs103.toc"
+  "cs103.aux"
   "/home/harry/Dropbox/Random_Code/web/cs103oracle/tex/cs103.log"
+  "cs103.pdf"

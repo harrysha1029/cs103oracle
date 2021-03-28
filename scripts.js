@@ -27,6 +27,10 @@ document.getElementById('search').onkeypress = function(e){
   }
 }
 
+document.getElementById('button').onclick = function(e) { 
+  handleChange(document.getElementById('search').value)
+}
+
 macros = {
     "\\E": "\\mathbb{E}"
     , "\\Var": "\\text{Var}"
